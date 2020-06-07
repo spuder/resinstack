@@ -19,6 +19,23 @@ way you can confidently know the state of your infrastructure at any
 given time since it can't be changed except during well defined
 lifecycle phases (rebooting).
 
+## Usage
+
+The included `make` file will create the appropriate images
+
+Create local images
+```
+make clean
+make local-img
+# This will create img/consul.qcow2 img/dhcpd.qcow2 img/nomad.qcow2 img/nomad-client.qcow2
+```
+
+Create a specific image
+```
+make clean
+make img/nomad.qcow2
+```
+
 ## Why Hashicorp?  Why not Kubernetes?
 
 If you want Kubernetes [that's been
